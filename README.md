@@ -8,7 +8,7 @@ Flixster is an app that allows users to browse movies from the [The Movie Databa
 #### REQUIRED (10pts)
 
 - [x] (8pts) Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
-- [ ] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
+- [x] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
 
 #### BONUS
 
