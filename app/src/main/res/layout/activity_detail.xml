@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Cats and Dogs 3 Paws Unite"
+        android:layout_margin="5dp"
+        android:textSize="40sp"/>
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?attr/ratingBarStyleIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:isIndicator="true"
+        android:numStars="10" />
+
+    <TextView
+        android:id="@+id/popularity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Popularity: 34555.68945"
+        android:layout_margin="5dp"
+        android:textSize="20dp"/>
+
+
+    <TextView
+        android:id="@+id/synopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        tools:text="It's been ten years since the creation of the Great Truce, an elaborate joint-species surveillance system designed and monitored by cats and dogs to keep the peace when conflicts arise. But when a tech-savvy villain hacks into wireless networks to use frequencies only heard by cats and dogs, he manipulates them into conflict and the worldwide battle between cats and dogs is BACK ON. Now, a team of inexperienced and untested agents will have to use their old-school animal instincts to restore order and peace between cats and dogs everywhere." />
+</LinearLayout>
