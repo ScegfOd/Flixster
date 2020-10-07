@@ -3,8 +3,10 @@ package com.example.flixster;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
@@ -20,10 +22,12 @@ import org.parceler.Parcels;
 
 import okhttp3.Headers;
 
+import static com.example.flixster.R.string.YT_API_KEY;
+
 public class DetailActivity extends YouTubeBaseActivity {
 
     private static final String API_KEY="AIzaSyDzKhCLLu_b_fnqYdS8MsNHB3MMeN8yg0I";
-    public static final String VIDEO_URL="https://api.themoviedb.org/3/movie/%d/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
+    public static final String VIDEO_URL="https://api.themoviedb.org/3/movie/%d/videos?api_key=";
     YouTubePlayerView youTubePlayerView;
 
     @Override
@@ -38,7 +42,7 @@ public class DetailActivity extends YouTubeBaseActivity {
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.player);
 
         AsyncHttpClient client = new AsyncHttpClient();
-        client.get(String.format(VIDEO_URL, movie.getId()), new JsonHttpResponseHandler() {
+        client.get(String.format(VIDEO_URL, movie.getId()) + getString(YT_API_KEY), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
                 try {
@@ -54,7 +58,6 @@ public class DetailActivity extends YouTubeBaseActivity {
 
             @Override
             public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
-
             }
         });
 
